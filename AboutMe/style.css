@@ -1,0 +1,18 @@
+a {
+    text-decoration: none;
+}
+
+/* Add underline only on hover */
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+  font-family: Impact, sans-serif;
+}
+
+body {
+  font-family: Impact, sans-serif;
+  background-image: url("concrete-seamless.jpg");
+}
+
