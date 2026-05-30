@@ -3,12 +3,12 @@
 <html>
 <head>
 <title>About Jensen</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <div class="floating-document">
 <h1>Jensen</h1>
-<img id="portraitImage" class="portrait" src="Jensen.jpg" alt="A picture of Jensen" width="494">
+<img id="portraitImage" class="portrait" src="Jensen.jpg" alt="A picture of Jensen">
 <h2>Personal Info:</h2>
 <p><b>Major:</b> Software Development<br>
 <b>High School:</b> Utah County Academy of Sciences, 2019<br>
@@ -25,7 +25,7 @@
 <h2>A Haiku Haiku</h2>
 <p id="BodyParagraph">I wrote this poem because I needed to write a haiku for this assignment, it is probably represantitive of the human struggling with something or other.<br></p>
 
-<p style="text-align: center;">This is a haiku<br>
+<p class="haiku-text">This is a haiku<br>
 Crazy, I know, a haiku<br>
 That is what it is<br>
 </p>  
@@ -39,7 +39,7 @@ That is what it is<br>
 
 <h2>Class Schedule</h2>
 <table cellspacing="3" cellpadding="3">
-<tr id="TableHeader">
+<tr class="table-header">
     <th></th>
     <th>Monday</th>
     <th>Tuesday</th>
@@ -50,11 +50,11 @@ That is what it is<br>
 </tr>
 <tr>
     <th>8:00-8:30</th>
-    <td rowspan="16" id="Work">Work</td>
-    <td rowspan="3" id="WebProgramming">Web Programming</td>
-    <td rowspan="16" id="Work">Work</td>
-    <td rowspan="3" id="WebProgramming">Web Programming</td>
-    <td rowspan="16" id="Work">Work</td>
+    <td rowspan="16" class="work">Work</td>
+    <td rowspan="3" class="web-programming">Web Programming</td>
+    <td rowspan="16" class="work">Work</td>
+    <td rowspan="3" class="web-programming">Web Programming</td>
+    <td rowspan="16" class="work">Work</td>
 
 </tr>
 <tr>
@@ -65,8 +65,8 @@ That is what it is<br>
 </tr>
 <tr>
     <th>9:30-10:00</th>
-    <td rowspan="3" id="ArtificialIntelligence">Artificial Intelligence</td>
-    <td rowspan="3" id="ArtificialIntelligence">Artificial Intelligence</td>
+    <td rowspan="3" class="artificial-intelligence">Artificial Intelligence</td>
+    <td rowspan="3" class="artificial-intelligence">Artificial Intelligence</td>
 </tr>
 <tr>
     <th>10:00-10:30</th>
@@ -76,8 +76,8 @@ That is what it is<br>
 </tr>
 <tr>
     <th>11:00-11:30</th>
-    <td rowspan="3" id="SoftwareDevelopment">Software Development</td>
-    <td rowspan="3" id="SoftwareDevelopment">Software Development</td>
+    <td rowspan="3" class="software-development">Software Development</td>
+    <td rowspan="3" class="software-development">Software Development</td>
 </tr>
 <tr>
     <th>11:30-12:00</th>
@@ -87,22 +87,22 @@ That is what it is<br>
 </tr>
 <tr>
     <th>12:30-1:00</th>
-    <td rowspan="2" id="English">English</td>
-    <td rowspan="2" id="English">English</td>
+    <td rowspan="2" class="english">English</td>
+    <td rowspan="2" class="english">English</td>
 </tr>
 <tr>
     <th>1:00-1:30</th>
 </tr>
 <tr>
     <th>1:30-2:00</th>
-    <td id="GoHome">Go Home</td>
-    <td id="GoHome">Go Home</td>
+    <td class="go-home">Go Home</td>
+    <td class="go-home">Go Home</td>
 
 </tr>
 <tr>
     <th>2:00-2:30</th>
-    <td rowspan="5" id="Nap">Nap</td>
-    <td rowspan="5" id="Nap">Nap</td>
+    <td rowspan="5" class="nap">Nap</td>
+    <td rowspan="5" class="nap">Nap</td>
 </tr>
 <tr>
     <th>2:30-3:00</th>
@@ -115,13 +115,13 @@ That is what it is<br>
 </tr>
 <tr>
     <th>4:00-4:30</th>
-    <td id="GoHome">Go Home</td>
-    <td id="GoHome">Go Home</td>
-    <td id="GoHome">Go Home</td>
+    <td class="go-home">Go Home</td>
+    <td class="go-home">Go Home</td>
+    <td class="go-home">Go Home</td>
 </tr>
 <tr>
     <th>4:30-5:00</th>
-    <td colspan="5" rowspan="2" id="Dinner">Dinner</td>
+    <td colspan="5" rowspan="2" class="dinner">Dinner</td>
 </tr>
 <tr>
     <th>5:00-5:30</th>
