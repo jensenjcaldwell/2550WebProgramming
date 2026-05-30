@@ -7,12 +7,189 @@ a:hover {
     text-decoration: underline;
 }
 
+
 p {
   font-family: Impact, sans-serif;
+}
+
+p:hover {
+  color: red;
+  transform: scale(1.5);
+  transform-origin: left center;
+  transition: cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s;
 }
 
 body {
   font-family: Impact, sans-serif;
   background-image: url("concrete-seamless.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-size: 12pt;
+  margin: 0;
+  padding: 32px 16px;
+}
+
+.floating-document {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(8, 6, 6, 0.95) 100%);
+}
+
+.portrait {
+  float: right;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(2px);
+}
+
+.modal.visible {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  width: min(90vw, 1100px);
+}
+
+.modal-content img {
+  display: block;
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+body.modal-open .floating-document {
+  filter: blur(3px) brightness(0.7);
+}
+
+
+#BodyParagraph {
+  text-indent: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-family: Impact, sans-serif;
+  color: blue;
+  text-align: center;
+  background: linear-gradient(to right, #ff0000, #0000ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1:hover {
+  transform: scale(3);
+  transition: cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th, td {
+  border: 2px solid rgb(243, 243, 243);
+  padding: 8px;
+  text-align: center;
+  background-color: rgb(8, 8, 24);
+  color: white;
+}
+
+#TableHeader {
+  background-color: rgb(84, 84, 196);
+  border: 2px solid rgb(230, 230, 238);
+  color: white;
+}
+
+#Work {
+  background-color: rgb(141, 230, 59);
+  border: 2px solid rgb(106, 172, 44);
+  color: rgb(0, 0, 0);
+}
+
+#WebProgramming {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(200, 0, 0);
+}
+
+#ArtificialIntelligence {
+  background-color: rgb(0, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 200, 200);
+}
+
+#SoftwareDevelopment {
+  background-color: rgb(255, 255, 0);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(200, 200, 0);
+}
+
+#English {
+  background-color: rgb(255, 165, 0);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(200, 130, 0);
+}
+
+#GoHome {
+  background-color: rgb(128, 0, 128);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(100, 0, 100);
+}
+
+#Nap {
+  background-color: rgb(0, 128, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 100, 0);
+}
+
+#Dinner {
+  background-color: rgb(255, 192, 203);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(200, 150, 160);
 }
 
