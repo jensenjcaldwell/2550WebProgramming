@@ -1,3 +1,5 @@
+// Followed: Canvas Project Specification
+
 const menuLinks = document.querySelectorAll(".menu-link");
 const panes = document.querySelectorAll(".tab-pane");
 
