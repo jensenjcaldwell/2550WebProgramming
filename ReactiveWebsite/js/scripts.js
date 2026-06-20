@@ -3,7 +3,15 @@ const panes = document.querySelectorAll(".tab-pane");
 
 function showPane(targetId) {
 	panes.forEach((pane) => {
-		pane.classList.toggle("active", pane.id === targetId);
+		const isActive = pane.id === targetId;
+		pane.classList.toggle("active", isActive);
+		pane.classList.remove("enter-animate");
+
+		if (isActive) {
+			// Play animation each time the tab is opened.
+			void pane.offsetWidth;
+			pane.classList.add("enter-animate");
+		}
 	});
 
 	menuLinks.forEach((link) => {
