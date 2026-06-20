@@ -1,0 +1,72 @@
+Project 3-Responsive Web Site-Topic of your Choice
+This project will allow you to build a responsive web site using all of the skills you have learned thus far.
+
+The theme of this web site is your choice.  Choose a theme or interest of yours that has plenty of content and that would allow you to utilize plenty of CSS skills.  You can let your imagination run wild.
+
+WEB SITE ELEMENTS -  site should include the following elements:
+Overall Layout  (Required)
+Use CSS Grid and Flexbox for your overall layout, columns, rows, alignment etc.  It is a best practice to use CSS Grid for your overall layout, and Flexbox for layout within the site containers.
+
+HTML 5 Semantic Tags for your entire layout: 
+
+main, header, section, article, nav, aside, footer, figure, figcaption, detail
+
+I recommend you start with just the main container tags for your application and then add content after they are placed and working as you desire.  Put a background and border on them so you can visualize your layout as you put your CSS Grid and Flexbox containers together.
+Home Page  (Required)
+Home page gives a nice one page display of your topic of interest
+Should include:
+At least four different areas on the page, e.g, 
+header
+Menu (aside)
+Main Content
+Footer
+Header (Required)
+Should have an image/logo and a title of some sort.
+You could place your menu in the header if you so choose.
+Menu (Required)
+Create a menu and place it in a <nav> element in either the header, or an aside to left of main content
+This could be a menu which uses  'pills' (buttons), or just plain <a> links.  
+Menu can be vertical or horizontal
+Menu has a minimum of three links to different 'sections' of your site, for example:
+Home -  Link which shows your Home Page content
+Contact - Link which shows your contact information
+???   - link to pages which might contain more detailed information and subsections of your site
+Menu actions will hide/show the different sections each whose main content is in tab-panes', one at a time.
+Section Content
+Hiding/Showing Content (Required)
+Implement implement each section of your site into separate <section> elements
+Hide all of the elements except for the 'Home' page using the 'display:none' style
+These are likely contained in <section> tags  One will be set to 'display:none' to start off with.   
+You will use javascript to hide and show these sections as you click on the menu items or pills.
+Images
+Your page must contain images (required) 
+At least one with a caption
+You should enclose this in a 'Figure' html5 tagLinks to an external site., which also includes a figcaption tag.  (required) (-2 if missing)
+Extra Credit  (+2) Utilize a 'picture' tag with child 'source' tags which show different images based on media query.
+Video (required) 
+Embed videos of interest on  your topic
+Overall Considerations
+Responsiveness (Desktop/Tablet)
+Your CSS Grid and  flexbox layout and css should make your profile look nice on both a large desktop as well as a tablet.
+Use media queriesLinks to an external site. to optimize layout at smaller/tablet size (approximately 768 pixels wide)
+Styling
+You should utilize your CSS skills to make your site LOOK NICE!   Use colors, gradients, background images, drop shadows,  images, icons etc. to enhance the look and feel of your site.
+Rubric
+See below rubric for details
+Extra Credit Opportunities
+Use animate.css, straight CSS, or javascript to create at least two pleasing animations (+2)
+Use fontawesome icons in your implementation (+2)
+Extra Credit  (+2) Utilize a 'picture' tag with child 'source' tags which show different images based on media query.
+Deliverables:
+upload everything in zybook link
+
+root directory including your index.html
+main.css file in the /css directory
+main.js file in the /js directory
+images you might use in /img directory
+videos (DO NOT INCLUDE!)
+Netlify Deploy
+
+Deploy your web site on Netlify or GitHub pages (see this guide). 
+
+Submit your URL as a comment on your submission.

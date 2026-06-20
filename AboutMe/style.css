@@ -16,3 +16,13 @@ body {
   background-image: url("concrete-seamless.jpg");
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+table th, table td {
+  vertical-align: top;
+  text-align: left;
+}
+

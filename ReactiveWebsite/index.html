@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Science Class Site Skeleton</title>
+</head>
+
+<body>
+    <div class="site-shell">
+
+    <header class="site-header">
+        <div class="hero-banner">
+            <img src="assets/galaxy.jpg" alt="Class logo" class="site-logo">
+            <h1>Mr. Caldwell's Science Class</h1>
+        </div>
+    </header>
+
+    <main class="layout-grid">
+        <aside class="menu-area">
+            <nav aria-label="Main navigation">
+                <ul class="menu-list">
+                    <li><a href="#" data-target="home" class="menu-link active">Home</a></li>
+                    <li><a href="#" data-target="classes" class="menu-link">Classes</a></li>
+                    <li><a href="#" data-target="assignments" class="menu-link">Assignments</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content-area">
+            <section id="home" class="tab-pane active" aria-label="Home section">
+                <h2>Home</h2>
+                <article>
+                    <p>This is barebones home content. Replace with your topic details.</p>
+                </article>
+                <figure>
+                    <img src="assets/galaxy.jpg" alt="Galaxy background sample" class="sample-image">
+                    <figcaption>Example image caption for your assignment.</figcaption>
+                </figure>
+                <details>
+                    <summary>Quick note</summary>
+                    <p>Use this area for extra information.</p>
+                </details>
+            </section>
+
+            <section id="classes" class="tab-pane" aria-label="Classes section">
+                <h2>Class Agenda</h2>
+                <h3>Topics for the Week</h3>
+                <p><b>Class 1:</b> Review of handouts and discussion of key concepts.</p>
+                <p><b>Class 2:</b> Group work on Newton's Laws of Motion.</p>
+                <p><b>Class 3:</b> Presentations of handouts and feedback session.</p>
+
+                <h3>Featured Video</h3>
+                <div class="video-wrap">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/kKKM8Y-u7ds?rel=0"
+                        title="Introduction to Newton's Laws"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <section id="assignments" class="tab-pane" aria-label="Assignments section">
+                <h2>Next Assignment: Newton's Laws of Motion Handout</h2>
+                <h3>Due Date: August 31st</h3>
+                <article>
+                    <p>You will create a 1 page handout that explains each of the three of Newton's laws of motion. The handout should include examples and illustrations to help explain each law. The handout should be usable by someone who is new to the concepts.</p>
+                    <p>Bring a rough draft to class for feedback on the due date.</p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Footer placeholder</p>
+    </footer>
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
