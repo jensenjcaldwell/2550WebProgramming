@@ -26,11 +26,12 @@ definitely become proficient with it. I am definitely interested in making bette
 <html>
 <head>
 <title>About Jensen</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<div class="floating-document">
 <h1>Jensen</h1>
-<img src="Jensen.jpg" alt="A picture of Jensen" width="500" height="500" style="float: right; margin-left: 15px;">
+<img id="portraitImage" class="portrait" src="Jensen.jpg" alt="A picture of Jensen">
 <h2>Personal Info:</h2>
 <p><b>Major:</b> Software Development<br>
 <b>High School:</b> Utah County Academy of Sciences, 2019<br>
@@ -45,23 +46,28 @@ definitely become proficient with it. I am definitely interested in making bette
 <i> The Hitchhiker's Guide to the Galaxy</i> - <a href="https://www.douglasadams.com/">Douglas Adams</a><br></p>
 
 <h2>A Haiku Haiku</h2>
-<p>I wrote this poem because I needed to write a haiku for this assignment, it is probably represantitive of the human struggling with something or other.<br></p>
+<p id="BodyParagraph">I wrote this poem because I needed to write a haiku for this assignment, it is probably represantitive of the human struggling with something or other.<br></p>
 
-<p style="text-align: center;">This is a haiku<br>
+<p class="haiku-text">This is a haiku<br>
 Crazy, I know, a haiku<br>
 That is what it is<br>
 </p>  
 
 <h2>My Personal Interests</h2>
-<p > Recently I have been getting into 3d printing nerf blasters and messing around with them. I have been quite surprised by how powerfule they can be and how hard they can fire a foam dart. It is a lot of fun to experiment with different designs and modifications.</p>
-<p> I also enjoy rock climbing and hiking in my free time. It is a great way to stay active and enjoy the outdoors. I especially love being able to do these with my wife.</p>
-<p> I have also been playing a lot of video games recently. I just played Expedition 33 which is an amazing game if you ever get the chance. I also really like the classic RTS game Total Annihilation.</p>
+<p id="BodyParagraph"> Recently I have been getting into 3d printing nerf blasters and messing around with them. I have been quite surprised by how powerfule they can be and how hard they can fire a foam dart. It is a lot of fun to experiment with different designs and modifications.</p>
+<p id="BodyParagraph"> I also enjoy rock climbing and hiking in my free time. It is a great way to stay active and enjoy the outdoors. I especially love being able to do these with my wife.</p>
+<p id="BodyParagraph"> I have also been playing a lot of video games recently. I just played Expedition 33 which is an amazing game if you ever get the chance. I also really like the classic RTS game Total Annihilation.</p>
 
 
 
 <h2>Class Schedule</h2>
+<<<<<<< HEAD
 <table border="1" cellspacing="3" cellpadding="3">
 <tr>
+=======
+<table cellspacing="3" cellpadding="3">
+<tr class="table-header">
+>>>>>>> 0a0a4a0a278e65cbba3c48a1b82f1968950c5b6b
     <th></th>
     <th>Monday</th>
     <th>Tuesday</th>
@@ -72,11 +78,11 @@ That is what it is<br>
 </tr>
 <tr>
     <th>8:00-8:30</th>
-    <td rowspan="16">Work</td>
-    <td rowspan="3">Web Programming</td>
-    <td rowspan="16">Work</td>
-    <td rowspan="3">Web Programming</td>
-    <td rowspan="16">Work</td>
+    <td rowspan="16" class="work">Work</td>
+    <td rowspan="3" class="web-programming">Web Programming</td>
+    <td rowspan="16" class="work">Work</td>
+    <td rowspan="3" class="web-programming">Web Programming</td>
+    <td rowspan="16" class="work">Work</td>
 
 </tr>
 <tr>
@@ -87,8 +93,8 @@ That is what it is<br>
 </tr>
 <tr>
     <th>9:30-10:00</th>
-    <td rowspan="3">Artificial Intelligence</td>
-    <td rowspan="3">Artificial Intelligence</td>
+    <td rowspan="3" class="artificial-intelligence">Artificial Intelligence</td>
+    <td rowspan="3" class="artificial-intelligence">Artificial Intelligence</td>
 </tr>
 <tr>
     <th>10:00-10:30</th>
@@ -98,8 +104,8 @@ That is what it is<br>
 </tr>
 <tr>
     <th>11:00-11:30</th>
-    <td rowspan="3">Software Development</td>
-    <td rowspan="3">Software Development</td>
+    <td rowspan="3" class="software-development">Software Development</td>
+    <td rowspan="3" class="software-development">Software Development</td>
 </tr>
 <tr>
     <th>11:30-12:00</th>
@@ -109,22 +115,22 @@ That is what it is<br>
 </tr>
 <tr>
     <th>12:30-1:00</th>
-    <td rowspan="2">English</td>
-    <td rowspan="2">English</td>
+    <td rowspan="2" class="english">English</td>
+    <td rowspan="2" class="english">English</td>
 </tr>
 <tr>
     <th>1:00-1:30</th>
 </tr>
 <tr>
     <th>1:30-2:00</th>
-    <td>Go Home</td>
-    <td>Go Home</td>
+    <td class="go-home">Go Home</td>
+    <td class="go-home">Go Home</td>
 
 </tr>
 <tr>
     <th>2:00-2:30</th>
-    <td rowspan="5">Nap</td>
-    <td rowspan="5">Nap</td>
+    <td rowspan="5" class="nap">Nap</td>
+    <td rowspan="5" class="nap">Nap</td>
 </tr>
 <tr>
     <th>2:30-3:00</th>
@@ -137,19 +143,30 @@ That is what it is<br>
 </tr>
 <tr>
     <th>4:00-4:30</th>
-    <td>Go Home</td>
-    <td>Go Home</td>
-    <td>Go Home</td>
+    <td class="go-home">Go Home</td>
+    <td class="go-home">Go Home</td>
+    <td class="go-home">Go Home</td>
 </tr>
 <tr>
     <th>4:30-5:00</th>
-    <td colspan="5" rowspan="2">Dinner</td>
+    <td colspan="5" rowspan="2" class="dinner">Dinner</td>
 </tr>
 <tr>
     <th>5:00-5:30</th>
 </tr>
 </table>
 
+
+</div>
+
+<div id="imageModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <button id="modalClose" class="modal-close" aria-label="Close image modal">&times;</button>
+        <img id="modalImage" src="Jensen.jpg" alt="A larger picture of Jensen">
+    </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
