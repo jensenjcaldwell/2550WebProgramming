@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css?v=20260709">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
     <title>Mr Caldwell's Science Class</title>
 </head>
 
 <body>
-    <div class="site-shell">
+    <div id="wrapper" class="site-shell">
 
     <header class="site-header">
         <div class="hero-banner">
@@ -20,19 +21,18 @@
         </div>
     </header>
 
-    <main class="layout-grid">
-        <aside class="menu-area">
-            <nav aria-label="Main navigation">
-                <ul class="menu-list">
-                    <li><a href="#" data-target="home" class="menu-link active"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="#" data-target="classes" class="menu-link"><i class="fa-solid fa-flask"></i> Classes</a></li>
-                    <li><a href="#" data-target="assignments" class="menu-link"><i class="fa-solid fa-clipboard-list"></i> Assignments</a></li>
-                    <li><a href="#" data-target="contact" class="menu-link"><i class="fa-solid fa-address-card"></i> Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <aside class="menu-area">
+        <nav aria-label="Main navigation">
+            <ul class="menu-list">
+                <li><a href="#home" class="menu-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#classes" class="menu-link"><i class="fa-solid fa-flask"></i> Classes</a></li>
+                <li><a href="#assignments" class="menu-link"><i class="fa-solid fa-clipboard-list"></i> Assignments</a></li>
+                <li><a href="#contact" class="menu-link"><i class="fa-solid fa-address-card"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-        <section class="content-area">
+    <main class="content-area">
             <section id="home" class="tab-pane active" aria-label="Home section">
                 <h2><i class="fa-solid fa-house"></i>Home</h2>
                 <article>
@@ -40,18 +40,18 @@
                     <p>In this class, we will explore major scientific concepts through observation, experimentation, and discussion. The goal is not just to memorize facts, but to think critically and understand why natural laws matter in everyday life.</p>
                 </article>
                 <div class="card-grid">
-                    <section class="card">
+                    <article class="card">
                         <h3>Observation</h3>
                         <p>Science begins by noticing patterns, changes, and questions in the world around us.</p>
-                    </section>
-                    <section class="card">
+                    </article>
+                    <article class="card">
                         <h3>Experiment</h3>
                         <p>We test ideas with careful procedures, data, and evidence we can measure.</p>
-                    </section>
-                    <section class="card">
+                    </article>
+                    <article class="card">
                         <h3>Discovery</h3>
                         <p>Each lesson builds toward a deeper understanding of how nature behaves.</p>
-                    </section>
+                    </article>
                 </div>
                 <figure>
                     <img src="assets/artemis_eclipse.jpg" alt="Galaxy background sample" class="sample-image">
@@ -101,7 +101,6 @@
                 </address>
                 <img src="assets/atom.png" alt="Science class logo" class="sample-image">
             </section>
-        </section>
     </main>
 
     <footer class="site-footer">

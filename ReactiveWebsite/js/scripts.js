@@ -17,13 +17,23 @@ function showPane(targetId) {
 	});
 
 	menuLinks.forEach((link) => {
-		link.classList.toggle("active", link.dataset.target === targetId);
+		const target = link.getAttribute("href")?.replace("#", "") || "";
+		link.classList.toggle("active", target === targetId);
 	});
 }
 
 menuLinks.forEach((link) => {
 	link.addEventListener("click", (event) => {
 		event.preventDefault();
-		showPane(link.dataset.target);
+		const targetId = link.getAttribute("href")?.replace("#", "") || "home";
+		showPane(targetId);
+		window.location.hash = targetId;
 	});
 });
+
+const initialPane = window.location.hash.replace("#", "");
+if (initialPane && document.getElementById(initialPane)) {
+	showPane(initialPane);
+} else {
+	showPane("home");
+}
