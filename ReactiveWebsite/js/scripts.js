@@ -2,6 +2,58 @@
 
 const menuLinks = document.querySelectorAll(".menu-link");
 const panes = document.querySelectorAll(".tab-pane");
+const themeToggleButton = document.getElementById("theme-toggle-btn");
+const themeHref = "css/theme.css?v=20260709";
+const themeLinkId = "theme-stylesheet";
+
+function getThemeLinkElement() {
+	return document.getElementById(themeLinkId);
+}
+
+function setThemeButtonState(isEnabled) {
+	if (!themeToggleButton) {
+		return;
+	}
+
+	themeToggleButton.setAttribute("aria-pressed", String(isEnabled));
+	themeToggleButton.textContent = isEnabled ? "Light Theme" : "Dark Theme";
+}
+
+function enableTheme() {
+	if (getThemeLinkElement()) {
+		setThemeButtonState(true);
+		return;
+	}
+
+	const link = document.createElement("link");
+	link.id = themeLinkId;
+	link.rel = "stylesheet";
+	link.href = themeHref;
+	document.head.appendChild(link);
+	setThemeButtonState(true);
+}
+
+function disableTheme() {
+	const link = getThemeLinkElement();
+	if (!link) {
+		setThemeButtonState(false);
+		return;
+	}
+
+	link.remove();
+	setThemeButtonState(false);
+}
+
+if (themeToggleButton) {
+	setThemeButtonState(false);
+	themeToggleButton.addEventListener("click", () => {
+		if (getThemeLinkElement()) {
+			disableTheme();
+		} else {
+			enableTheme();
+		}
+	});
+}
 
 function showPane(targetId) {
 	panes.forEach((pane) => {
