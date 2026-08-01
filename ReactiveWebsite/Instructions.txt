@@ -1,49 +1,60 @@
-Project 4: Responsive Web Site-CSS Theme and Refactor (100 Points)
-First step: Return to Project 3 and download your previous files, then upload them here. At least, unless you want to do that project all over again. Only then should you start implementing Project 4.
+In this final iteration of your Personal Website, you will incorporate a "Visitor Registration" form. You will utilize Flexbox for the layout and write custom JavaScript to handle event listeners, regular expression (Regex) pattern matching, and real-time DOM manipulation for validation feedback.
 
-Part I: Standardized Setup (10 Points)
-To prepare for the advanced layout and responsiveness requirements, your page must meet these technical organization standards:
+I. Refactor & Organization (15 Points)
+Clean up your existing codebase to support a growing JavaScript application.
 
-Mobile Meta Tag: You must include <meta name="viewport" content="width=device-width, initial-scale=1.0"> in the <head>.
+Single-Page Architecture: Ensure your site functions as a Single-Page Application (SPA). The new form must be hidden by default and revealed when a "Log Visit" menu item or button is clicked, matching the behavior of your other sections.
 
-Root Structure: All primary layout elements (<header>, <aside>, <main>, <footer>) must be direct children of a single parent container (e.g., a <div id="wrapper"> or the <body>).
+File Structure: Organize your JavaScript into functional modules within a js/ subfolder:
 
-ID Integrity: Every <section> must have an id that matches an anchor link in your navigation menu exactly.
+js/main.js: Your primary entry point.
 
-II. The "Theme Override" Stylesheet (30 Points)
-Create a new "Theme" that substantially alters the page without modifying your original styles.css.
+js/validation.js: Your form validation library.
 
-Inheritance: Do not copy-paste your original CSS. Your theme.css should only contain properties that are being overridden.
+js/page.js: Dedicated logic for page switching and theme toggling.
 
-Visual Transformation: You must change at least three of the following categories:
+Documentation: At the top of main.js, include a multi-line comment header that contains a disclaimer stating you wrote the code yourself, followed by a brief summary of the changes and fixes you implemented during this refactor.
 
-Layout Swap: Move the <aside> from left to right (e.g., by changing grid-template-areas).
+II. Visitor Form Validation (70 Points)
+1. Form Structure & Layout
+Build a visually appealing form using Flexbox. Your <form> tag must include a novalidate attribute to disable HTML5 browser validation. It must also include an inline return false statement: <form id="myform" novalidate onsubmit="return false;">. This prevents the automated grading environment from timing out.
 
-Color Palette: A complete shift (e.g., Light Mode to Dark Mode).
+Required Form Elements:
 
-Typography: Change all primary fonts and spacing.
+Field	Input Type	Validation Requirement
+First & Last Name	Text	Required
+Address & City	Text	Required
+State	Text	Required. Must validate against the provided stateAbbreviations array.
+Zip Code	Text	Required. Must match regex for 5-digit or 9-digit format.
+Cell Phone	Text	Required. Must match a valid phone number regex (find one via Regexr or Regex101).
+Email Address	Text	Required. Must match the provided email regex.
+Discovery Method	Checkbox Group	Required. At least one option (e.g., Google, Friend) must be checked.
+Comments	Text Area	Optional
+2. JavaScript Validation Library (validation.js)
 
-Component Style: Redefine the visual look of your .card elements (e.g., changing from borders to deep shadows).
+Complete the stubbed functions in the provided template to build your validation library.
 
-III. Dynamic Theme Toggle (30 Points)
-Use JavaScript to allow the user to switch themes in real-time.
+Event Listeners:
 
-Trigger: Add a button or link with a unique id.
+onChange: As the user exits a field (tabs out or clicks away), validate that specific element immediately.
 
-Injection Logic: When clicked, your script must dynamically create a <link> element pointing to css/theme.css and append it to the <head> of the document.
+onSubmit: Capture the submit event on your form. You must prevent the default submission (ev.preventDefault()) and stop event bubbling. Run validation on the entire form from here.
 
-Toggle State: Clicking the button again must remove the theme link, reverting the site to its original appearance.
+3. User Feedback & Submission
 
-IV. Mobile Responsiveness (20 Points)
-Ensure the site is usable on smaller screens using media queries.
+Provide clean, inline feedback using CSS and DOM manipulation.
 
-Viewport Meta: You must include <meta name="viewport" content="width=device-width, initial-scale=1.0"> in your <head>.
+Error States: When a field is invalid, use JavaScript to add a .was-validated class to the input. Your CSS should use the input.was-validated:invalid pseudo-class to turn the border red and reveal the error message <div>.
 
-The Breakpoint: Implement at least one @media query (e.g., max-width: 768px).
+Success States: If a field is valid, indicate success (e.g., a green border).
 
-Responsive Layout: On mobile, your CSS Grid must "stack." The <aside> and <main> content should move from a side-by-side layout to a single-column vertical layout.
+Submission Handling: Upon clicking Submit (use a standard <button type="submit">), if form.checkValidity() returns true, hide the form entirely and display a "Thank you for logging your visit!" message on the page. If false, display all relevant error messages.
 
-V. Refactor & Modernization (10 Points)
-Variable Usage: Move your primary colors and spacing into CSS Variables (:root { --main-bg: #fff; }) to make theme switching cleaner.
+III. Styling & Responsiveness (15 Points)
+Flexbox Forms: Use display: flex to align your labels, inputs, and error messages cleanly. Make the ugly template look professional.
 
-Semantic Check: Ensure all layout issues from previous submissions (alignment, flex-direction errors, or spacing) are corrected using the "best practice" methods (Grid/Flexbox) rather than "hacks" (floats/manual heights).
+Theme Integration: The custom "Theme" you built in Project 4 must apply to this new form section (colors, fonts, input styling).
+
+Tablet/Desktop Responsiveness: Ensure the form does not break or stretch awkwardly on large desktop monitors or medium tablet screens.
+
+

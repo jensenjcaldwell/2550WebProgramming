@@ -27,6 +27,7 @@
                 <li><a href="#home" class="menu-link active"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="#classes" class="menu-link"><i class="fa-solid fa-flask"></i> Classes</a></li>
                 <li><a href="#assignments" class="menu-link"><i class="fa-solid fa-clipboard-list"></i> Assignments</a></li>
+                <li><a href="#visit" class="menu-link"><i class="fa-solid fa-right-to-bracket"></i> Visitor Registration</a></li>
                 <li><a href="#contact" class="menu-link"><i class="fa-solid fa-address-card"></i> Contact</a></li>
             </ul>
         </nav>
@@ -92,6 +93,76 @@
             <img src="assets/NewtonCradle.gif" alt="Newton's Laws of Motion" class="sample-image">
             </section>
 
+            <section id="visit" class="tab-pane" aria-label="Visitor registration section">
+                <h2><i class="fa-solid fa-id-card"></i> Visitor Registration</h2>
+                <p>Register your visit so we can keep a record of everyone who stops by the classroom.</p>
+                <div id="visitor-form" class="visitor-card">
+                    <form id="myform" novalidate onsubmit="return false;">
+                        <div class="form-stack">
+                            <div class="form-row">
+                                <label for="first-name">First Name</label>
+                                <input id="first-name" name="first-name" type="text" placeholder="First Name" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="last-name">Last Name</label>
+                                <input id="last-name" name="last-name" type="text" placeholder="Last Name" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="address">Address</label>
+                                <input id="address" name="address" type="text" placeholder="Street address" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="city">City</label>
+                                <input id="city" name="city" type="text" placeholder="City" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="state">State</label>
+                                <input id="state" name="state" type="text" maxlength="2" placeholder="CA" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="zip">Zip Code</label>
+                                <input id="zip" name="zip" type="text" placeholder="12345 or 12345-6789" required pattern="\d{5}(-\d{4})?" maxlength="10" title="Enter a valid ZIP code (12345 or 12345-6789)">
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="phone">Cell Phone</label>
+                                <input id="phone" name="phone" type="text" placeholder="555-555-1234" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="email">Email Address</label>
+                                <input id="email" name="email" type="text" placeholder="name@example.com" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <label>Discovery Method</label>
+                                <div class="checkbox-group" role="group" aria-label="Discovery method">
+                                    <label><input type="checkbox" id="discovery-google" name="find-us" value="Google"> Google</label>
+                                    <label><input type="checkbox" id="discovery-friend" name="find-us" value="Friend"> Friend</label>
+                                    <label><input type="checkbox" id="discovery-social" name="find-us" value="Social"> Social Media</label>
+                                </div>
+                                <div class="error-message discovery-feedback"></div>
+                            </div>
+                            <div class="form-row">
+                                <label for="comments">Comments</label>
+                                <textarea id="comments" name="comments" rows="4" placeholder="Optional comments"></textarea>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit">Submit</button>
+                                <button type="reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="form-success-message" class="success-message" hidden>Thank you for logging your visit!</div>
+            </section>
+
             <section id="contact" class="tab-pane" aria-label="Contact section">
                 <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
                 <address>
@@ -109,7 +180,9 @@
 
     </div>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
